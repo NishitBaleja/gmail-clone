@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico">
+    </head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header__left">
+                <span class="material-icons">menu</span>
+                <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png" alt="Gmail Logo">
+            </div>
+            <div class="header__middle">
+                <span class="material-icons">search</span>
+                <input type="text" placeholder="Search mail">
+                <span class="material-icons">arrow_drop_down</span>
+            </div>
+            <div class="header__right">
+                <span class="material-icons">help_outline</span>
+                <span class="material-icons">settings</span>
+                <span class="material-icons">apps</span>
+                <div class="profile-nishi">N</div>
+            </div>
+        </div>
+
+        <div class="app__body">
+            <div class="sidebar">
+                <button class="sidebar__compose">
+                    <span class="material-icons">add</span>
+                    Compose
+                </button>
+                <div class="sidebarOption sidebarOption--active">
+                    <span class="material-icons">inbox</span>
+                    <h3>Inbox</h3>
+                    <p id="inboxCount"></p>
+                </div>
+                <div class="sidebarOption">
+                    <span class="material-icons">star</span>
+                    <h3>Starred</h3>
+                </div>
+                <div class="sidebarOption">
+                    <span class="material-icons">access_time</span>
+                    <h3>Snoozed</h3>
+                </div>
+                <div class="sidebarOption">
+                    <span class="material-icons">send</span>
+                    <h3>Sent</h3>
+                </div>
+                <div class="sidebarOption">
+                    <span class="material-icons">note</span>
+                    <h3>Drafts</h3>
+                </div>
+                <div class="sidebarOption">
+                    <span class="material-icons">expand_more</span>
+                    <h3>More</h3>
+                </div>
+                <hr>
+                <h3 class="sidebar__labels">Labels</h3>
+                <div class="sidebarOption">
+                    <span class="material-icons">label_important</span>
+                    <h3>Work</h3>
+                </div>
+                <div class="sidebarOption">
+                    <span class="material-icons">label_important</span>
+                    <h3>Personal</h3>
+                </div>
+            </div>
+
+            <div class="emailList">
+                <div class="emailList__settings">
+                    <div class="emailList__settingsLeft">
+                        <input type="checkbox">
+                        <span class="material-icons">arrow_drop_down</span>
+                        <span class="material-icons">refresh</span>
+                        <span class="material-icons">more_vert</span>
+                    </div>
+                    <div class="emailList__settingsRight">
+                        <p id="emailListRangeAndTotal"></p>
+                        <span class="material-icons">chevron_left</span>
+                        <span class="material-icons">chevron_right</span>
+                    </div>
+                </div>
+
+                <div class="emailList__sections">
+                    <div class="emailList__section emailList__section--active">
+                        <span class="material-icons">inbox</span>
+                        <h3>Primary</h3>
+                    </div>
+                    <div class="emailList__section">
+                        <span class="material-icons">local_offer</span>
+                        <h3>Promotions</h3>
+                        <span id="promotionsCount"></span>
+                    </div>
+                    <div class="emailList__section">
+                        <span class="material-icons">people</span>
+                        <h3>Social</h3>
+                        <span id="socialCount"></span>
+                    </div>
+                    <div class="emailList__section">
+                        <span class="material-icons">info</span>
+                        <h3>Updates</h3>
+                        <span id="updatesCount"></span>
+                    </div>
+                </div>
+
+                <div class="emailList__list">
+                    </div>
+            </div>
+
+            <div class="emailDetail" style="display: none;">
+                <div class="emailDetail__header">
+                    <div class="emailDetail__headerLeft">
+                        <span class="material-icons emailDetail__back">arrow_back</span>
+                        <span class="material-icons">archive</span>
+                        <span class="material-icons">report</span>
+                        <span class="material-icons">delete</span>
+                        <span class="material-icons">mail_outline</span>
+                        <span class="material-icons">access_time</span>
+                        <span class="material-icons">add_task</span>
+                        <span class="material-icons">drive_file_move</span>
+                        <span class="material-icons">label</span>
+                        <span class="material-icons">more_vert</span>
+                    </div>
+                    <div class="emailDetail__headerRight">
+                        <p>1 of 1</p> <span class="material-icons">chevron_left</span>
+                        <span class="material-icons">chevron_right</span>
+                    </div>
+                </div>
+
+                <div class="emailDetail__subject">
+                    <h2 id="emailDetailSubject"></h2> <span class="material-icons">print</span>
+                    <span class="material-icons">open_in_new</span>
+                </div>
+
+                <div class="emailDetail__info">
+                    <div class="emailDetail__infoLeft">
+                        <div class="profile-pic-small"></div> <div class="emailDetail__sender">
+                            <h4 id="emailDetailSender"></h4> <p>to Nishit Baleja &lt;nishitbaleja@gmail.com&gt;</p>
+                        </div>
+                    </div>
+                    <div class="emailDetail__infoRight">
+                        <p id="emailDetailDate"></p> <span class="material-icons">star_border</span>
+                        <span class="material-icons">reply</span>
+                        <span class="material-icons">more_vert</span>
+                    </div>
+                </div>
+
+                <div class="emailDetail__body">
+                    </div>
+
+                <div class="emailDetail__actions">
+                    <button class="emailDetail__reply-btn">
+                        <span class="material-icons">reply</span> Reply
+                    </button>
+                    <button class="emailDetail__forward-btn">
+                        <span class="material-icons">forward</span> Forward
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
