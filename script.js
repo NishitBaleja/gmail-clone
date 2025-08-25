@@ -1056,4 +1056,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (backButton) { // Ensure backButton exists before adding listener
         backButton.addEventListener('click', closeEmailDetail);
     }
+    
 });
